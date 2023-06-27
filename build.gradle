@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url = "file:" + new File(project.rootProject.rootDir, "local_test_repo").path
+        }
+    }
+    dependencies {
+        //比如这个
+//        classpath 'com.google.gms:google-services:4.3.4'  // Google Services plugin
+        classpath 'con.fire.okplugin:OKVSPlugin:1.0.3'
+
+    }
+}
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+//        maven {
+//            url = "file:" + new File(project.rootProject.rootDir, "local_test_repo").path
+//        }
+//        jcenter() // Warning: this repository is going to shut down soon
+    }
+}

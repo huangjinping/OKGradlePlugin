@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "con.fire.okplugin",
+    "module": "OKVSPlugin",
+    "version": "1.0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "OKVSPlugin-1.0.3.jar",
+          "url": "OKVSPlugin-1.0.3.jar",
+          "size": 2268,
+          "sha512": "f5e64c790f3b4deb51c724b9842a6bff90763429d54c1c10afb677e2cf21580a686c00a9e21831b5cee3a4f47d12aa39a2989c149012bfd9ecaa98995962447a",
+          "sha256": "9a1c32501b7841b1d96076ed0ec5e37a44f8f7155c69459f93077b971fc3eaa6",
+          "sha1": "a5fd082ee0a34aec60aa3adc97788f570b1068a5",
+          "md5": "9c9a8caaf6a2ad9b8d9f921488d98f6d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "OKVSPlugin-1.0.3.jar",
+          "url": "OKVSPlugin-1.0.3.jar",
+          "size": 2268,
+          "sha512": "f5e64c790f3b4deb51c724b9842a6bff90763429d54c1c10afb677e2cf21580a686c00a9e21831b5cee3a4f47d12aa39a2989c149012bfd9ecaa98995962447a",
+          "sha256": "9a1c32501b7841b1d96076ed0ec5e37a44f8f7155c69459f93077b971fc3eaa6",
+          "sha1": "a5fd082ee0a34aec60aa3adc97788f570b1068a5",
+          "md5": "9c9a8caaf6a2ad9b8d9f921488d98f6d"
+        }
+      ]
+    }
+  ]
+}

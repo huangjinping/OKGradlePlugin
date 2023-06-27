@@ -1,0 +1,69 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java-gradle-plugin' // 自动化生成 plugin id 使用
+    id 'maven-publish' // 上传aar到maven使用
+//    id 'maven'
+}
+//
+//gradlePlugin {
+//    plugins {
+////        modularPlugin {
+////            // Plugin id.
+////            id = 'con.fire.okplugin'
+////            // Plugin implementation.
+////            implementationClass = 'con.fire.okplugin.OKVSPlugin'
+////        }
+//
+//        create("okplugin01") {
+//            id = 'con.fire.okplugin'
+//            implementationClass = 'OKVSPlugin'
+//        }
+//    }
+//}
+
+
+
+afterEvaluate {
+
+    publishing {
+        //发布的 jar 包配置
+        publications {
+            release(MavenPublication) {
+                groupId = 'con.fire.okplugin'
+                artifactId = 'OKVSPlugin'
+                version = '1.0.3'
+                from components.java
+
+            }
+        }
+        //仓库地址配置
+        repositories {
+            maven {
+                // test, upload local maven repository
+                url = "file:" + new File(project.rootProject.rootDir, "local_test_repo").path
+//                url = uri('../repo')
+//                url = layout.buildDirectory.dir('repo')
+
+            }
+        }
+    }
+}
+
+
+//gradlePlugin {
+//    plugins {
+//        modularPlugin {
+//            // Plugin id.
+//            id = 'con.fire.okplugin'
+//            // Plugin implementation.
+//            implementationClass = 'con.fire.okplugin.OKVSPlugin'
+//        }
+//    }
+//}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
